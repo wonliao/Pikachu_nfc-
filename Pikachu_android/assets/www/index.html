@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>NFC Reader Demo</title>
+<link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="phonegap-nfc.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+
+nfc.addTagDiscoveredListener( cb  );
+nfc.addMimeTypeListener( cb  );
+nfc.addNdefListener( cb  );
+nfc.addNdefFormatableListener( cb  );
+nfc.share( cb  );
+
+function cb(nfcEvent) {
+	
+	console.log( "won test ==> cb" );
+/*
+	console.log("won +>" + JSON.stringify(nfcEvent.tag));
+	
+	var tag = nfcEvent.tag;
+	//alert( tag.id );
+	if( tag.id == "4,-56,-87,-47,-32,37,-128" ) {
+
+		$('#player_name').html("日王日王");
+		setTimeout( function() {
+			$('#player_name').html("");
+		}, 2000);
+	} else if( tag.id == "4,23,-75,17,-59,2,-128" ) {
+		
+		$('#player_name').html("Marjorie");
+		setTimeout( function() {
+			$('#player_name').html("");
+		}, 2000);
+	} else if( tag.id == "-76,-113,34,43" ) {
+		
+		$('#player_name').html("OPEN醬");
+		setTimeout( function() {
+			$('#player_name').html("");
+		}, 2000);
+	}
+*/	
+}
+
+
+
+
+</script>
+</head>
+
+
+<body>
+  <h1>旺旺隨便做</h1>
+  <div id="player_name" style="position:absolute; top:200px; left:20px; font-size:72px"></div>
+</body>
+</html>
